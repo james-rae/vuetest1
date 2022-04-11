@@ -9,6 +9,7 @@ import 'uno.css'
 
 const routes = setupLayouts(generatedRoutes)
 
+// SSG = static site generation. What would be an alternative?
 // https://github.com/antfu/vite-ssg
 export const createApp = ViteSSG(
   App,
