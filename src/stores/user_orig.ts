@@ -1,6 +1,6 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
 
-export const useUserStore = defineStore('user', () => {
+export const useUserOrigStore = defineStore('user_orig', () => {
   /**
    * Current name of the user.
    */
@@ -30,6 +30,7 @@ export const useUserStore = defineStore('user', () => {
   }
 })
 
-// lol whut?
+// this allows you to persist data across a hot reload.
+// https://pinia.vuejs.org/cookbook/hot-module-replacement.html
 if (import.meta.hot)
-  import.meta.hot.accept(acceptHMRUpdate(useUserStore, import.meta.hot))
+  import.meta.hot.accept(acceptHMRUpdate(useUserOrigStore, import.meta.hot))

@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { useUserStore } from '~/stores/user'
+import { useUserOrigStore } from '~/stores/user_orig'
 
 const props = defineProps<{ name: string }>()
 const router = useRouter()
-const user = useUserStore()
+const user = useUserOrigStore()
 const { t } = useI18n()
 
 watchEffect(() => {

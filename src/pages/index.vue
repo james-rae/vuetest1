@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import { useUserStore } from '~/stores/user'
+// this is landing page. likely erase or map onto user.vue
 
-const user = useUserStore()
+import { useUserOrigStore } from '~/stores/user_orig'
+
+const user = useUserOrigStore()
 const name = $ref(user.savedName)
 
 const router = useRouter()
