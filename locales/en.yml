@@ -16,3 +16,6 @@ intro:
   aka: Also known as
   whats-your-name: What's your name?
 not-found: Not found
+user:
+  desc: User Profile
+  name-default: Book Name
