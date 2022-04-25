@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useTagStore } from '~/stores/tags'
+import { useTagStore } from '~/stores/tags';
 
 const tags = useTagStore();
 
@@ -7,10 +7,10 @@ const tags = useTagStore();
 </script>
 
 <template>
-  <div>
-    Tags Page
-    <ul>
-      <li v-for="t in tags.tagList">{{t.name}}</li>
-    </ul>
-  </div>
+    <div>
+        Tags Page
+        <ul>
+            <li v-for="t in tags.tagList">{{ t.name }}</li>
+        </ul>
+    </div>
 </template>

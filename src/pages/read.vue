@@ -1,9 +1,5 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <div>
-    Read Template
-  </div>
+    <div>Read Template</div>
 </template>
