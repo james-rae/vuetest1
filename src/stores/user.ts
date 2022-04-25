@@ -12,7 +12,7 @@ export const useUserStore = defineStore({
 export const useUserStore = defineStore('user', () => {
   
   // Current name of the users book.   
-  const bookName = ref('orig val test');
+  const bookName = ref('');
   
   return {
     bookName,

@@ -2,7 +2,6 @@
 
 ## Next Things
 
-- Make a template link up to pinea
 - Make a template link up to a list in pinea
 
 ## Noteable Code
