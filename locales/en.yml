@@ -1,21 +1,21 @@
 button:
-  about: About
-  back: Back
-  go: GO
-  home: Home
-  toggle_dark: Toggle dark mode
-  toggle_langs: Change languages
-  write: Write
-  read: Read
-  tags: Tags
-  user: User
+    about: About
+    back: Back
+    go: GO
+    home: Home
+    toggle_dark: Toggle dark mode
+    toggle_langs: Change languages
+    write: Write
+    read: Read
+    tags: Tags
+    user: User
 intro:
-  desc: Opinionated Vite Starter Template
-  dynamic-route: Demo of dynamic route
-  hi: Hi, {name}!
-  aka: Also known as
-  whats-your-name: What's your name?
+    desc: Opinionated Vite Starter Template
+    dynamic-route: Demo of dynamic route
+    hi: Hi, {name}!
+    aka: Also known as
+    whats-your-name: What's your name?
 not-found: Not found
 user:
-  desc: User Profile
-  name-default: Book Name
+    desc: User Profile
+    name-default: Book Name

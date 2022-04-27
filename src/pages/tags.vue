@@ -10,7 +10,7 @@ const tags = useTagStore();
     <div>
         Tags Page
         <ul>
-            <li v-for="t in tags.tagList">{{ t.name }}</li>
+            <li v-for="t in tags.tagList" :key="t.name">{{ t.name }}</li>
         </ul>
     </div>
 </template>
