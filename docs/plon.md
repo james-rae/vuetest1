@@ -3,6 +3,8 @@
 ## Next Things
 
 - Make a template link up to a list in pinea
+- Add a new tag
+  - Combo to pick months. Reusable thing. pass option to parent
 
 ## Noteable Code
 

@@ -40,6 +40,34 @@ class TimePoint {
             return this.month >= tp.month;
         }
     }
+
+    toText(): string {
+        if (this.month === 0) {
+            return this.year.toString();
+        } else {
+            const m = TimePoint.monthNames();
+            return `${m[this.month - 1]} ${this.year.toString()}`;
+        }
+    }
+
+    static monthNames(): Array<string> {
+        // switch to keys that work with the lang framework?
+        // have lang framework working here?
+        return [
+            'Jan',
+            'Feb',
+            'Mar',
+            'Apr',
+            'May',
+            'Jun',
+            'Jul',
+            'Aug',
+            'Sep',
+            'Oct',
+            'Nov',
+            'Dec'
+        ];
+    }
 }
 
 class TimeRange {
@@ -55,6 +83,10 @@ class TimeRange {
 
     isIn(tp: TimePoint): boolean {
         return this.start.isBefore(tp) && this.end.isAfter(tp);
+    }
+
+    toText(): string {
+        return `${this.start.toText()} - ${this.end.toText()}`;
     }
 
     static fromRaw(y1: number, m1: number, y2: number, m2: number): TimeRange {
@@ -75,7 +107,8 @@ class Tag {
 export const useTagStore = defineStore('tags', () => {
     // List of tags.
     const tagList = reactive([
-        new Tag('germs', TimeRange.fromRaw(2020, 3, 2022, 4))
+        new Tag('germs', TimeRange.fromRaw(2020, 3, 2022, 4)),
+        new Tag('eps', TimeRange.fromRaw(1983, 9, 1992, 6))
     ]);
 
     function newTag(
@@ -88,7 +121,12 @@ export const useTagStore = defineStore('tags', () => {
         tagList.push(new Tag(name, TimeRange.fromRaw(y1, m1, y2, m2)));
     }
 
+    function monthNames(): Array<string> {
+        return TimePoint.monthNames();
+    }
+
     return {
+        monthNames,
         newTag,
         tagList
     };
